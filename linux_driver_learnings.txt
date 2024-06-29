@@ -1,0 +1,20 @@
+Installing and Removing the User Application Module (Loadable Kernel Module)
+-------------------------------------------------------------
+sudo insmod driver_1.ko
+sudo rmmod driver_1
+
+Module Information
+-------------------------------------------
+modinfo driver_2.ko
+
+
+driver_2 commands
+
+installing the module with passing parameters
+-------------------------------------------------------
+sudo insmod driver_2.ko i32_value=100 name="Driver2" i32_array=1,2,3,4
+
+Setting the parameters
+----------------------------------------------
+sudo sh -c "echo 13 > /sys/module/driver_2/parameters/i32_cb_value"
+
